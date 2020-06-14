@@ -13,7 +13,7 @@ module.exports = appInfo => {
   const config = exports = {};
 
   // use for cookie sign key, should change to your own and keep security
-  config.keys = appInfo.name + '_1588813516612_9957';
+  config.keys = appInfo.name + '_1579788120104_5194';
 
   // add your middleware config here
   config.middleware = [];
@@ -22,22 +22,22 @@ module.exports = appInfo => {
   const userConfig = {
     // myAppName: 'egg',
   };
-	
-	// 关闭csrf，开启跨域
-	config.security = {
-		// 关闭csrf
-		csrf: {
-			enable: false,
-		},
-		// 跨域白名单
-		domainWhiteList: []
-	}
-	// 允许跨域的方法
-	config.cors = {
-		origin: '*',
-		allowMethods: 'GET, PUT, POST, DELETE, PATCH'
-	}
-  
+
+  // 关闭csrf开启跨域
+  config.security = {
+    // 关闭 csrf
+    csrf: {
+      enable: false,
+    },
+    // 跨域白名单
+    domainWhiteList: [],
+  };
+  // 允许跨域的方法
+  config.cors = {
+    origin: '*',
+    allowMethods: 'GET, PUT, POST, DELETE, PATCH'
+  };
+
   // 数据库
   config.sequelize = {
     dialect: 'mysql',
